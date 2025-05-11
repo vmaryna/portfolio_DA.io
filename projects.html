@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"></style>
+    <style>
+        /*         img {
+          max-width: 300px;
+          max-height: 300px;
+        } */
+
+        .display_grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          /* justify-content: space-evenly; */
+          gap: 2rem;
+          justify-items: center;
+
+        }
+        
+        .img-wrapper {
+          position: relative; /*important */
+          overflow: hidden; /*remove later. ment for zoom effect*/
+
+        }
+
+        .img-wrapper > img {
+          display: block; /*important for the parent*/
+          width: 100%; /*======try max-width later*/
+          /* aspect-ratio: 1 / 1; */
+          object-fit: cover; /* ====== apply at the programs page */
+          object-position: center; 
+        }
+
+        .img-wrapper > .content {
+          position: absolute;/*important for the child*/
+         /*  inset: 0; */
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: rgba(59, 58, 58, 0.4); /* transparency .1-... */
+          font-size: 2rem;
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .img-wrapper > img,
+        .img-wrapper > .content {
+          transition: 200ms ease-in-out;
+        }
+
+        /* SLIDE EFFECT */
+
+        .img-wrapper > .content.fade {
+          transform: translateX(-100%);
+        }
+    
+        .img-wrapper:hover > .content.fade{
+          transform: translateX(0);
+        }
+
+        /* scroll-bar */
+
+        .scroll-bar{
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 100px;
+            padding: 5px;
+            
+            overflow: hidden;
+            overflow-y: scroll;
+            border: 1px solid rgb(74, 73, 73);
+        }
+    </style>
+    <title>Projects</title>
+</head>
+
+
+
+
+<body>
+
+  <div style="width: 2rem; margin: 1rem auto;">
+    <button><a href="home.html" style="margin: auto; color: rgb(24, 24, 26)">Home</a></button>
+  </div>
+
+    <h1>My future DA Projects</h1>
+
+
+    <!-- image hover -->
+
+    <div class="display_grid">
+      <!-- project1 -->
+
+      <div class="project">
+        <h2 style="text-align: center;">Project 1</h2>
+        <div class="img-wrapper">
+          <img src="./photos/tablo_img_3.png" alt="smth">
+          <div class="content fade">Short description of the project. Subject analysis insights.</div>
+        </div>
+      
+      </div>
+      <!-- project2 -->
+      <div class="project">
+        <h2 style="text-align: center;">Project 2</h2>
+
+        <div class="img-wrapper">
+          <img src="./photos/tablo_img_2.png" alt="smth">
+          <div class="content fade">Short description of the project. Subject analysis insights.</div>
+        </div>
+      </div>  
+
+
+      <div class="project">
+        <h2 style="text-align: center;">Project 3</h2>
+
+        <div class="img-wrapper">
+          <img src="./photos/tablo_img_3.png" alt="smth">
+          <div class="content fade">Short description of the project. Subject analysis insights.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+      <!-- scroll-bar -->
+<!--       <div style class="scroll-bar">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit. Veniam praesentium magni quia accusantium assumenda esse culpa autem laborum at? Deleniti illum eaque maiores ad nam numquam quia harum, exercitationem atque, nesciunt iure incidunt molestias delectus sit officiis. Similique eius sit repudiandae voluptatem, odit mollitia eligendi illum explicabo corporis.
+        </p>
+      </div>
+     -->
+
+    <div style="width: 2rem; margin: 1rem auto;">
+      <button><a href="home.html" style="margin: auto; color: rgb(24, 24, 26)">⟵</a></button>
+    </div>
+
+</body>
+</html>
