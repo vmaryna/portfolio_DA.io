@@ -1,10 +1,3 @@
-/*home.html styling*/
-
-/* body {
-    background-color: rgb(58, 56, 56);
-    color: beige;
-} */
-
 body{
     background-color: rgb(31, 30, 30);
       color: azure;
@@ -17,6 +10,13 @@ body{
 a {
     color: azure;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*====== header ======*/
@@ -42,6 +42,11 @@ nav {
     margin-left: auto;
 }
 
+.nava {
+    color: rgb(23, 23, 25); /* all the rest a should be white */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
 
 /*====== end of header ======*/
 
